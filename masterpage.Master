@@ -23,10 +23,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
+        
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <img src="img/books.png" width="30" height="30" />
+
+        </nav>
+
     </form>
 </body>
 </html>
