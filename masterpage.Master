@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.master.cs" Inherits="WebApplicationLibrary.masterpage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--bootstrap css --%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css --%>
+    <link href="dtables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome css --%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <%--bootstrap bundle jquery --%>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <%--bootstrap popper --%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js --%>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
