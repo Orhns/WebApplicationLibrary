@@ -67,10 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bootstrap\css\bootstrap.min.css" />
-    <Content Include="bootstrap\js\bootstrap.bundle.min.js" />
-    <Content Include="bootstrap\js\bootstrap.min.js" />
-    <Content Include="bootstrap\js\popper.min.js" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\js\bootstrap.bundle.js" />
     <Content Include="dtables\css\jquery.dataTables.min.css" />
     <Content Include="dtables\js\jquery.dataTables.min.js" />
     <Content Include="fontawesome\css\all.css" />
