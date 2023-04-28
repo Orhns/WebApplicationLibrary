@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="bootstrap\css\bootstrap.css" />
     <Content Include="bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="css\customSytle.css" />
     <Content Include="dtables\css\jquery.dataTables.min.css" />
     <Content Include="dtables\js\jquery.dataTables.min.js" />
     <Content Include="fontawesome\css\all.css" />
@@ -2127,6 +2128,7 @@
     <Content Include="fontawesome\svgs\solid\yen-sign.svg" />
     <Content Include="fontawesome\svgs\solid\yin-yang.svg" />
     <Content Include="fontawesome\svgs\solid\z.svg" />
+    <Content Include="home.aspx" />
     <Content Include="img\adminuser.png" />
     <Content Include="img\book-online.png" />
     <Content Include="img\books.png" />
@@ -2146,6 +2148,13 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="masterpage.Master.cs">
       <DependentUpon>masterpage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
