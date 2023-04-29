@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage.Master" AutoEventWireup="true" CodeBehind="userlogin.aspx.cs" Inherits="WebApplicationLibrary.userlogin" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -31,7 +32,7 @@
                                 <div class="form-group d-grid gap-2 mb-2 mt-3">
                                     <asp:Button class="btn btn-success " ID="Button1" runat="server" Text="Login" />
                                 </div>
-                               
+
                                 <div class="form-group d-grid gap-2">
                                     <a href="usignup.aspx" class="btn btn-info" role="button">Sign Up</a>
                                     <!--<inputclass="btn btn-info" id="Button2" type="button" value="Sign Up" />-->
@@ -41,7 +42,7 @@
                     </div>
                 </div>
 
-                <a href="home.aspx"> <i class="fa-solid fa-house"></i> Back to home </a>
+                <a href="home.aspx"><i class="fa-solid fa-house"></i>Back to home </a>
                 <br />
                 <br />
             </div>
