@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage.Master" AutoEventWireup="true" CodeBehind="usignup.aspx.cs" Inherits="WebApplicationLibrary.signup" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage.Master" AutoEventWireup="true" CodeBehind="uprofile.aspx.cs" Inherits="WebApplicationLibrary.uprofile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -6,20 +6,27 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-8 mx-auto">
-
+            <!-- left column -->
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
                                 <center>
                                     <img src="img/generaluser.png" width="100px" />
-                                    <h4 class="mt-2 ">Member Signup Form</h4>
-                                    <hr />
                                 </center>
                             </div>
                         </div>
-
+                        <div class="row mb-2">
+                            <div class="col">
+                                <center>
+                                    <h4 class="mt-2 ">Profile</h4>
+                                    <span>Account Status - </span>
+                                    <asp:Label ID="Label1" runat="server" Text="Your Status" class="badge rounded-pill text-bg-success"></asp:Label>
+                                </center>
+                            </div>
+                        </div>
+                        <hr />
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="TextBox1" class="form-label">Full Name</label>
@@ -93,37 +100,74 @@
                             <center>
                                 <div class="col-md-3">
                                     <div class="form-group d-grid gap-2 mb-2 mt-3">
-                                        <span class="badge rounded-pill text-bg-info">Login credits</span>
+                                        <span class="badge rounded-pill text-bg-danger">Change Password</span>
                                     </div>
                                 </div>
                             </center>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <label for="TextBox5" class="form-label">User ID</label>
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="User ID"></asp:TextBox>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <label for="TextBox9" class="form-label">Password</label>
+                            <div class="col-md-4">
+                                <label for="TextBox9" class="form-label">Old password</label>
                                 <div class="form-group">
                                     <asp:TextBox CssClass="form-control" ID="TextBox9" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                                 </div>
                             </div>
+                            <div class="col-md-4">
+                                <label for="TextBox10" class="form-label">New password</label>
+                                <div class="form-group">
+                                    <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                </div>
+                            </div>
                         </div>
-
                         <div class="row">
                             <div class="col">
-                                <div class="form-group d-grid gap-2 mb-2 mt-3">
-                                    <asp:Button class="btn btn-success " ID="Button1" runat="server" Text="Sign Up" />
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+                                    <asp:Button class="btn btn-success justify-content-md-end" ID="Button1" runat="server" Text="Apply Changes" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <a href="home.aspx"><i class="fa-solid fa-house"></i>Back to home </a>
+                <br />
+                <br />
+            </div>
+
+            <!-- right column -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <center>
+                                    <img src="img/books.png" width="100px" />
+                                    <h4 class="mt-2 ">Your Books</h4>
+                                    <div class="row mb-2">
+                                        <center>
+                                            <asp:Label ID="Label2" runat="server" Text="Informations" class="badge rounded-pill text-bg-success"></asp:Label>
+                                        </center>
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <hr />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <asp:GridView class="table" ID="GridView1" runat="server"></asp:GridView>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <br />
                 <br />
             </div>
