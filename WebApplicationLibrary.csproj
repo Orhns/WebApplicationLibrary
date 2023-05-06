@@ -70,6 +70,7 @@
     <Content Include="adminlogin.aspx" />
     <Content Include="a_author_mng.aspx" />
     <Content Include="a_book_i.aspx" />
+    <Content Include="a_book_inventory.aspx" />
     <Content Include="a_publisher_mng.aspx" />
     <Content Include="a_usrmng.aspx" />
     <Content Include="bootstrap\css\bootstrap.css" />
@@ -2175,6 +2176,13 @@
     </Compile>
     <Compile Include="a_book_i.aspx.designer.cs">
       <DependentUpon>a_book_i.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="a_book_inventory.aspx.cs">
+      <DependentUpon>a_book_inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="a_book_inventory.aspx.designer.cs">
+      <DependentUpon>a_book_inventory.aspx</DependentUpon>
     </Compile>
     <Compile Include="a_publisher_mng.aspx.cs">
       <DependentUpon>a_publisher_mng.aspx</DependentUpon>
