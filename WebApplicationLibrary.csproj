@@ -71,6 +71,7 @@
     <Content Include="a_author_mng.aspx" />
     <Content Include="a_book_i.aspx" />
     <Content Include="a_publisher_mng.aspx" />
+    <Content Include="a_usrmng.aspx" />
     <Content Include="bootstrap\css\bootstrap.css" />
     <Content Include="bootstrap\js\bootstrap.bundle.js" />
     <Content Include="css\customSytle.css" />
@@ -2152,7 +2153,6 @@
     <Content Include="usignup.aspx" />
     <Content Include="ulogin.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="adminlogin.aspx.cs">
@@ -2182,6 +2182,13 @@
     </Compile>
     <Compile Include="a_publisher_mng.aspx.designer.cs">
       <DependentUpon>a_publisher_mng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="a_usrmng.aspx.cs">
+      <DependentUpon>a_usrmng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="a_usrmng.aspx.designer.cs">
+      <DependentUpon>a_usrmng.aspx</DependentUpon>
     </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
@@ -2218,13 +2225,6 @@
     </Compile>
     <Compile Include="ulogin.aspx.designer.cs">
       <DependentUpon>ulogin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
