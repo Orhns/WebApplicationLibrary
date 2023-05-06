@@ -16,6 +16,7 @@
                                 </center>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col">
                                 <center>
@@ -41,6 +42,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row mt-3">
                             <div class="col-4">
                                 <div class="d-grid gap-2">
@@ -58,6 +60,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <a href="home.aspx"><i class="fa-solid fa-house"></i>Back to home </a>

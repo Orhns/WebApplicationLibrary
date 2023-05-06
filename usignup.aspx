@@ -34,6 +34,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="TextBox3" class="form-label">Contact Number</label>
@@ -48,6 +49,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-md-4">
                                 <label for="DropDownList1" class="form-label">State</label>
@@ -81,6 +83,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-md-12">
                                 <label for="Textbox8" class="form-label">Full Address</label>
@@ -89,6 +92,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
                             <center>
                                 <div class="col-md-3">
@@ -98,6 +102,7 @@
                                 </div>
                             </center>
                         </div>
+
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="TextBox5" class="form-label">User ID</label>

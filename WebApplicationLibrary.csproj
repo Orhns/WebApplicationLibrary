@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="adminlogin.aspx" />
     <Content Include="a_author_mng.aspx" />
+    <Content Include="a_book_i.aspx" />
     <Content Include="a_publisher_mng.aspx" />
     <Content Include="bootstrap\css\bootstrap.css" />
     <Content Include="bootstrap\js\bootstrap.bundle.js" />
@@ -2167,6 +2168,13 @@
     </Compile>
     <Compile Include="a_author_mng.aspx.designer.cs">
       <DependentUpon>a_author_mng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="a_book_i.aspx.cs">
+      <DependentUpon>a_book_i.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="a_book_i.aspx.designer.cs">
+      <DependentUpon>a_book_i.aspx</DependentUpon>
     </Compile>
     <Compile Include="a_publisher_mng.aspx.cs">
       <DependentUpon>a_publisher_mng.aspx</DependentUpon>

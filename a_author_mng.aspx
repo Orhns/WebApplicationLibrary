@@ -41,6 +41,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row mt-3">
                             <div class="col-4">
                                 <div class="d-grid gap-2">
@@ -64,7 +65,6 @@
                 <br />
                 <br />
             </div>
-
             <!-- right column -->
             <div class="col-md-7">
                 <div class="card">
