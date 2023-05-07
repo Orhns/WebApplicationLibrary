@@ -73,7 +73,7 @@
       <DependentUpon>libraryDB.mdf</DependentUpon>
     </Content>
     <Content Include="a_author_mng.aspx" />
-    <Content Include="a_book_i.aspx" />
+    <Content Include="a_book_iss.aspx" />
     <Content Include="a_book_inventory.aspx" />
     <Content Include="a_publisher_mng.aspx" />
     <Content Include="a_usrmng.aspx" />
@@ -2157,6 +2157,7 @@
     <Content Include="uprofile.aspx" />
     <Content Include="usignup.aspx" />
     <Content Include="ulogin.aspx" />
+    <Content Include="vbooks.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -2174,12 +2175,12 @@
     <Compile Include="a_author_mng.aspx.designer.cs">
       <DependentUpon>a_author_mng.aspx</DependentUpon>
     </Compile>
-    <Compile Include="a_book_i.aspx.cs">
-      <DependentUpon>a_book_i.aspx</DependentUpon>
+    <Compile Include="a_book_iss.aspx.cs">
+      <DependentUpon>a_book_iss.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="a_book_i.aspx.designer.cs">
-      <DependentUpon>a_book_i.aspx</DependentUpon>
+    <Compile Include="a_book_iss.aspx.designer.cs">
+      <DependentUpon>a_book_iss.aspx</DependentUpon>
     </Compile>
     <Compile Include="a_book_inventory.aspx.cs">
       <DependentUpon>a_book_inventory.aspx</DependentUpon>
@@ -2237,6 +2238,13 @@
     </Compile>
     <Compile Include="ulogin.aspx.designer.cs">
       <DependentUpon>ulogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vbooks.aspx.cs">
+      <DependentUpon>vbooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vbooks.aspx.designer.cs">
+      <DependentUpon>vbooks.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
