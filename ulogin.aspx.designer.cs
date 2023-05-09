@@ -15,22 +15,22 @@ namespace WebApplicationLibrary
     {
 
         /// <summary>
-        /// TextBox1 control.
+        /// memberid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox memberid;
 
         /// <summary>
-        /// TextBox2 control.
+        /// mpassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox mpassword;
 
         /// <summary>
         /// Button1 control.

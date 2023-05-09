@@ -23,14 +23,14 @@
                             <div class="col">
                                 <label for="TextBox1" class="form-label">Member ID</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Member ID"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="memberid" runat="server" placeholder="Member ID"></asp:TextBox>
                                 </div>
                                 <label for="TextBox2" class="form-label">Password</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="mpassword" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                                 </div>
                                 <div class="form-group d-grid gap-2 mb-2 mt-3">
-                                    <asp:Button class="btn btn-success " ID="Button1" runat="server" Text="Login" />
+                                    <asp:Button class="btn btn-success " ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
                                 </div>
 
                                 <div class="form-group d-grid gap-2">

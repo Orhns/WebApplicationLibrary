@@ -12,7 +12,6 @@ namespace WebApplicationLibrary
 {
     public partial class signup : System.Web.UI.Page
     {
-
         string conn = ConfigurationManager.ConnectionStrings["connectionstr"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {

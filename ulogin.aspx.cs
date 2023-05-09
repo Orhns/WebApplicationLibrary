@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,9 +12,50 @@ namespace WebApplicationLibrary
 {
     public partial class userlogin : System.Web.UI.Page
     {
+        string conn = ConfigurationManager.ConnectionStrings["connectionstr"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+       
+            checkUserLogin();
+        }
+        bool chckUsr;
+        bool checkUserLogin()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(conn);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("SELECT * FROM member_master_tbl WHERE member_id = @mid AND password = @mpass ;", con);
+                cmd.Parameters.AddWithValue("@mid", memberid.Text.Trim());
+                cmd.Parameters.AddWithValue("@mpass", mpassword.Text.Trim());
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Response.Write("<script>alert('welcome " + reader.GetValue(2).ToString() + "');</script>");
+                        
+                    }
+                chckUsr = true;
+                }
+                else
+                {
+                    Response.Write("<script>alert('invalid memberid or password.');</script>");
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "')</script>");
+            }
+            return chckUsr;
         }
     }
 }
