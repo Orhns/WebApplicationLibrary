@@ -3,12 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <div class="container">
+    <div style="background-image: url('img/background2.jpg');">
+    <div class="container" style="min-height:max-content">
         <div class="row">
-            <div class="col-md-6 mx-auto">
+            <div class="col-md-6 mx-auto m-5" style="min-height:stretch">
 
-                <div class="card">
+                <div class="card" style="background-color:lightgray;">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -45,8 +45,10 @@
                 <a href="home.aspx"><i class="fa-solid fa-house"></i>Back to home </a>
                 <br />
                 <br />
+                <br />
             </div>
         </div>
+    </div>
     </div>
 
 </asp:Content>

@@ -3,9 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
-    <div  style="background-image: url('img/background2.jpg');">
-    <div class="container">
-        <div class="row">
+    <div style="background-image: url('img/background2.jpg');">
+    <div class="container" style="min-height:max-content">
+        <div class="row pt-5">
             <div class="col-md-8 mx-auto">
                 <div class="card">
                     <div class="card-body" style="background-color:lightgray;">
@@ -55,16 +55,14 @@
                                 <div class="form-group">
                                     <asp:DropDownList CssClass="form-control" ID="DropDownList1state" runat="server" TabIndex="0">
                                         <asp:ListItem Text="Select" Value="0" Enabled="True" />
-                                        <asp:ListItem Text="Andhra Pradesh" Value="Andhra Pradesh" />
-                                        <asp:ListItem Text="Arunachal Pradesh" Value="Arunachal Pradesh" />
-                                        <asp:ListItem Text="Assam" Value="Assam" />
-                                        <asp:ListItem Text="Bihar" Value="Bihar" />
-                                        <asp:ListItem Text="Chhattisgarh" Value="Chhattisgarh" />
-                                        <asp:ListItem Text="Rajasthan" Value="Rajasthan" />
-                                        <asp:ListItem Text="Goa" Value="Goa" />
-                                        <asp:ListItem Text="Gujarat" Value="Gujarat" />
-                                        <asp:ListItem Text="Haryana" Value="Haryana" />
-                                        <asp:ListItem Text="Himachal Pradesh" Value="Himachal Pradesh" />
+                                        <asp:ListItem Text="Turkey" Value="Turkey" />
+                                        <asp:ListItem Text="Bulgaria" Value="Bulgaria" />
+                                        <asp:ListItem Text="Greece" Value="Greece" />
+                                        <asp:ListItem Text="France" Value="France" />
+                                        <asp:ListItem Text="Lithuania" Value="Lithuania" />
+                                        <asp:ListItem Text="Germany" Value="Germany" />
+                                        <asp:ListItem Text="Russia" Value="Russia" />
+                                        <asp:ListItem Text="Netherlands" Value="Netherlands" />
                                     </asp:DropDownList>
 
                                 </div>
@@ -134,5 +132,6 @@
         </div>
     </div>
     </div>
+   
 
 </asp:Content>

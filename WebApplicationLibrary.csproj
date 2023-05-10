@@ -2145,13 +2145,16 @@
     <Content Include="img\book-online.png" />
     <Content Include="img\books.png" />
     <Content Include="img\books1.png" />
+    <Content Include="img\bookshelf.png" />
     <Content Include="img\defaulters-list.png" />
     <Content Include="img\digital-data.png" />
     <Content Include="img\digital-inventory.png" />
+    <Content Include="img\flyinbooks.png" />
     <Content Include="img\generaluser.png" />
     <Content Include="img\home-bg.jpg" />
     <Content Include="img\in-homepage-banner.jpg" />
     <Content Include="img\library.png" />
+    <Content Include="img\librarypng.png" />
     <Content Include="img\publisher.png" />
     <Content Include="img\search-online.png" />
     <Content Include="img\sign-up.png" />
