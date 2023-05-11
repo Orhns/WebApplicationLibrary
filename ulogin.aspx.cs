@@ -41,10 +41,14 @@ namespace WebApplicationLibrary
                 {
                     while (reader.Read())
                     {
-                        Response.Write("<script>alert('welcome " + reader.GetValue(2).ToString() + "');</script>");
-                        
+                        Response.Write("<script>alert('logged in successfully');</script>");
+                        Session["memberid"] = reader.GetValue(0).ToString();
+                        Session["fullname"] = reader.GetValue(2).ToString();
+                        Session["role"] = "user";
+                        Session["status"] = reader.GetValue(10).ToString();
                     }
-                chckUsr = true;
+                    chckUsr = true;
+                    Response.Redirect("home.aspx");
                 }
                 else
                 {

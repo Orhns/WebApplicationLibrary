@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -11,6 +12,61 @@ namespace WebApplicationLibrary
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (Session["role"] == null)
+                {
+                    //user buttons
+                    LinkButton1.Visible = true;  //user login button
+                    LinkButton2.Visible = true;  // signup button
+                    LinkButton3.Visible = false; //logout button
+                    LinkButton7.Visible = false; //hello user button
+                    //admin buttons
+                    LinkButton6.Visible = true; //admin login button
+                    LinkButton8.Visible = false; // book inventory button
+                    LinkButton9.Visible = false; // book issuing button
+                    LinkButton10.Visible = false; //member management button
+                    LinkButton11.Visible = false; // author management button
+                    LinkButton12.Visible = false; // publisher management button
+                }
+                else if (Session["role"].Equals("user"))
+                {
+                    //user buttons
+                    LinkButton1.Visible = false;  //user login button
+                    LinkButton2.Visible = false;  // signup button
+                    LinkButton3.Visible = true; //logout button
+                    LinkButton7.Visible = true; //hello user button
+                    LinkButton7.Text = "Hello " + Session["fullname"].ToString();
+                    //admin buttons
+                    LinkButton6.Visible = false; //admin login button
+                    LinkButton8.Visible = false; // book inventory button
+                    LinkButton9.Visible = false; // book issuing button
+                    LinkButton10.Visible = false; //member management button
+                    LinkButton11.Visible = false; // author management button
+                    LinkButton12.Visible = false; // publisher management button
+                }
+                else if (Session["role"].Equals("admin"))
+                {
+                    //user buttons
+                    LinkButton1.Visible = false;  //user login button
+                    LinkButton2.Visible = false;  // signup button
+                    LinkButton3.Visible = true; //logout button
+                    LinkButton7.Visible = true; //hello user button
+                    LinkButton7.Text = "Hello Admin";
+                    //admin buttons
+                    LinkButton6.Visible = false; //admin login button
+                    LinkButton8.Visible = true; // book inventory button
+                    LinkButton9.Visible = true; // book issuing button
+                    LinkButton10.Visible = true; //member management button
+                    LinkButton11.Visible = true; // author management button
+                    LinkButton12.Visible = true; // publisher management button
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
 
         }
 
@@ -57,6 +113,15 @@ namespace WebApplicationLibrary
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
             Response.Redirect("vbooks.aspx");
+        }
+        //logout
+        protected void LinkButton3_Click(object sender, EventArgs e)
+        {
+            Session["memberid"] = "";
+            Session["fullname"] = "";
+            Session["role"] = "";
+            Session["status"] = "";
+            Response.Redirect("home.aspx");
         }
     }
 }

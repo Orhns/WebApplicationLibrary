@@ -5,16 +5,22 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="background-image: url('img/background2.jpg');">
     <div class="container" style="min-height:max-content">
-        <div class="row">
-            <div class="col-md-6 mx-auto m-5" style="min-height:stretch">
+        <div class="row ">
+            <div class="col-md-6 mt-4 mx-auto" style="min-height:550px">
 
                 <div class="card" style="background-color:lightgray;">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <img src="img/generaluser.png" width="150px" />
-                                    <h3 class="mt-2 ">Member Login</h3>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                        <img src="img/user.png" width="100px" />
+                                        </div>
+                                        <div class="col-md-8 m-auto">
+                                        <h3 class="mt-2 text-lg-start">Member Login</h3>
+                                        </div>
+                                    </div>
                                     <hr />
                                 </center>
                             </div>
@@ -41,10 +47,6 @@
                         </div>
                     </div>
                 </div>
-
-                <a href="home.aspx"><i class="fa-solid fa-house"></i>Back to home </a>
-                <br />
-                <br />
                 <br />
             </div>
         </div>

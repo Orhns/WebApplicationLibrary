@@ -5,15 +5,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
     <div style="background-image: url('img/background2.jpg');">
     <div class="container" style="min-height:max-content">
-        <div class="row pt-5">
-            <div class="col-md-8 mx-auto">
+        <div class="row">
+            <div class="col-md-8 mt-4 mx-auto">
                 <div class="card">
                     <div class="card-body" style="background-color:lightgray;">
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <img src="img/generaluser.png" width="100px" />
-                                    <h4 class="mt-2 ">Member Signup Form</h4>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                    <img src="img/add-user.png" width="100px" />
+                                        </div>
+                                        <div class="col-md-8 m-auto">
+                                    <h4 class="mt-1 text-lg-start">Member Signup Form</h4>
+                                        </div>
+                                    </div>
                                     <hr />
                                 </center>
                             </div>
@@ -124,9 +130,6 @@
                         </div>
                     </div>
                 </div>
-
-                <a href="home.aspx"><i class="fa-solid fa-house"></i>Back to home </a>
-                <br />
                 <br />
             </div>
         </div>

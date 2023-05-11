@@ -2139,6 +2139,7 @@
     <Content Include="fontawesome\svgs\solid\yin-yang.svg" />
     <Content Include="fontawesome\svgs\solid\z.svg" />
     <Content Include="home.aspx" />
+    <Content Include="img\add-user.png" />
     <Content Include="img\background1.jpg" />
     <Content Include="img\adminuser.png" />
     <Content Include="img\background2.jpg" />
@@ -2158,6 +2159,7 @@
     <Content Include="img\publisher.png" />
     <Content Include="img\search-online.png" />
     <Content Include="img\sign-up.png" />
+    <Content Include="img\user.png" />
     <Content Include="img\writer.png" />
     <Content Include="uprofile.aspx" />
     <Content Include="usignup.aspx" />

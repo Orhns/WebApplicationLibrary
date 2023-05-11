@@ -4,7 +4,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
         <!-- Showcase -->
-    <section class="bg-dark text-light p-lg-0 pt-lg-1 text-center text-sm-start" id="showcaseSec">
+    <div id="homepg_bg">
+    <section class=" text-light p-lg-0 pt-lg-1 text-center text-sm-start" id="showcaseSec">
         <div class="container justify-content-center">
             <div class="row d-sm-flex align-items-center justify-content-center">
                 <div class="col-4 d-none d-sm-block">
@@ -25,7 +26,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-dark">
+    <section class="">
     <div class="container ">
     <h2 class="text-center mb-4 text-light">Frequently Asked Questions</h2>
     <!--accordeon flush-->
@@ -64,7 +65,7 @@
     </div>
 </section> 
 
-   
+    </div>  
 
         <!-- Modal 
     <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
