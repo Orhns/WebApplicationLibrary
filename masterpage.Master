@@ -7,16 +7,21 @@
     <title></title>
     
     <%--bootstrap css --%>
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap5/bootstrap.min.css" rel="stylesheet" />
     <%--datatables css --%>
-    <link href="dtables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="dtablesbs5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="dtablesbs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
     <%--fontawesome css --%>
     <link href="fontawesome/css/all.css" rel="stylesheet" />
     <%--custom css --%>
     <link href="css/customSytle.css" rel="stylesheet" />
-    <%--bootstrap bundle jquery --%>
-    <script src="bootstrap/js/bootstrap.bundle.js"></script>
-    
+    <%--bootstrap5 seperate jquery --%>
+    <script src="bootstrap5/popper.min.js"></script>
+    <script src="bootstrap5/bootstrap.min.js"></script>
+    <%--datatables js --%>
+    <script src="dtablesbs5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="dtablesbs5/js/jquery-3.5.1.js"></script>
+    <script src="dtablesbs5/js/jquery.dataTables.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
