@@ -16,7 +16,10 @@ namespace WebApplicationLibrary
         string conn = ConfigurationManager.ConnectionStrings["connectionstr"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            getAuthorPublisherValues();
+            if (!IsPostBack)
+            {
+                getAuthorPublisherValues();
+            }
             GridView1.DataBind(); 
         }
 
@@ -106,8 +109,8 @@ namespace WebApplicationLibrary
                 cmd.Parameters.AddWithValue("@bID", bookIDtxt.Text.Trim());
                 cmd.Parameters.AddWithValue("@bNAME", bookNametxt.Text.Trim());
                 cmd.Parameters.AddWithValue("@genre", genres);
-                cmd.Parameters.AddWithValue("@aName", DropDownAuthors.SelectedItem.Value);
-                cmd.Parameters.AddWithValue("@pName", DropDownPublishers.SelectedItem.Value);
+                cmd.Parameters.AddWithValue("@aName", DropDownAuthors.SelectedValue.ToString());
+                cmd.Parameters.AddWithValue("@pName", DropDownPublishers.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@pDate", publishDatetxt.Text.Trim());
                 cmd.Parameters.AddWithValue("@language", DropDownLanguage.SelectedItem.Value);
                 cmd.Parameters.AddWithValue("@edition", editiontxt.Text.Trim());

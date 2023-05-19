@@ -29,7 +29,7 @@
     <form id="form1" runat="server">
 
         <!-- navigation bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-lg-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home.aspx">
                     <i class="fa-solid fa-book"></i>

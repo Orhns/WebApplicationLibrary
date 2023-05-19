@@ -8,8 +8,8 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <div class="container">
+    <div style="background-color:cadetblue">
+    <div class="container pt-4">
         <div class="row">
             <!-- left column -->
             <div class="col-md-5">
@@ -108,5 +108,5 @@
             </div>
         </div>
     </div>
-
+</div>
 </asp:Content>
