@@ -14,6 +14,8 @@ namespace WebApplicationLibrary
     public partial class a_book_inventory : System.Web.UI.Page
     {
         string conn = ConfigurationManager.ConnectionStrings["connectionstr"].ConnectionString;
+        static string global_filepath;
+        static int global_actual_stock, global_current_stock, global_issued_books;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -25,7 +27,7 @@ namespace WebApplicationLibrary
 
         protected void getBtn_Click(object sender, EventArgs e)
         {
-
+            getBookByID();
         }
 
         protected void addBtn_Click(object sender, EventArgs e)
@@ -80,7 +82,70 @@ namespace WebApplicationLibrary
                 Response.Write("<script>alert('" + ex.Message + "')</script>");
             }
         }
+        void getBookByID()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(conn);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("SELECT * FROM book_master_tbl WHERE book_id =@bID;", con);
+                cmd.Parameters.AddWithValue("@bID",bookIDtxt.Text.Trim());
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    bookNametxt.Text = dt.Rows[0]["book_name"].ToString();
+                    publishDatetxt.Text = dt.Rows[0]["publish_date"].ToString();
+                    editiontxt.Text = dt.Rows[0]["edition"].ToString();
+                    editiontxt.Text = dt.Rows[0]["edition"].ToString();
+                    bookcosttxt.Text = dt.Rows[0]["book_cost"].ToString().Trim();
+                    pagestxt.Text = dt.Rows[0]["no_of_pages"].ToString().Trim();
+                    actualstocktxt.Text = dt.Rows[0]["actual_stock"].ToString().Trim();
+                    currentstocktxt.Text = dt.Rows[0]["current_stock"].ToString().Trim();
+                    description.Text = dt.Rows[0]["book_description"].ToString();
+                    issuedbookstxt.Text = ""+ (Convert.ToInt32(dt.Rows[0]["actual_stock"].ToString()) - 
+                        Convert.ToInt32(dt.Rows[0]["current_stock"].ToString()));
 
+
+                    DropDownLanguage.SelectedValue = dt.Rows[0]["language"].ToString().Trim();
+                    DropDownPublishers.SelectedValue = dt.Rows[0]["publisher_name"].ToString().Trim();
+                    DropDownAuthors.SelectedValue = dt.Rows[0]["author_name"].ToString().Trim();
+
+                    ListBoxGenre.ClearSelection();
+                    string[] genre = dt.Rows[0]["genre"].ToString().Trim().Split(',');
+                    for (int i = 0; i < genre.Length; i++)
+                    {
+                        for (int x = 0; x < ListBoxGenre.Items.Count; x++)
+                        {
+                            if (ListBoxGenre.Items[x].ToString() == genre[i])
+                            {
+                                ListBoxGenre.Items[x].Selected = true;
+                            }
+                        }
+                    }
+
+                    global_actual_stock = Convert.ToInt32(dt.Rows[0]["actual_stock"].ToString().Trim());
+                    global_current_stock = Convert.ToInt32(dt.Rows[0]["current_stock"].ToString().Trim());
+                    global_issued_books = global_actual_stock - global_current_stock;
+                    global_filepath = dt.Rows[0]["book_img_link"].ToString();
+                }
+                else
+                {
+                    Response.Write("<script>alert('Invalid Book ID')</script>");
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "')</script>");
+            }
+        }
         void addNewBook()
         {
             try
@@ -129,6 +194,84 @@ namespace WebApplicationLibrary
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "')</script>");
+            }
+        }
+        bool checkTheBookExist()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(conn);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("SELECT * FROM book_master_tbl WHERE book_id = @bID;", con);
+                cmd.Parameters.AddWithValue("@bID", bookIDtxt.Text.Trim());
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    checkidhelper = true;
+                }
+                else
+                {
+                    checkidhelper = false;
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "')</script>");
+            }
+            return checkidhelper;
+        }
+        void updateBookByID()
+        {
+            if (checkTheBookExist())
+            {
+                try
+                {
+                    string genres = "";
+                    foreach (int i in ListBoxGenre.GetSelectedIndices())
+                    {
+                        genres = genres + ListBoxGenre.Items[i] + ",";
+                    }
+                    genres = genres.Remove(genres.Length - 1);
+
+                    SqlConnection con = new SqlConnection(conn);
+                    if (con.State == ConnectionState.Closed)
+                    {
+                        con.Open();
+                    }
+                    SqlCommand cmd = new SqlCommand("UPDATE book_master_tbl SET book_name=@book_name,genre=@genre,author_name=@author_name" +
+                        ",publisher_name=@publisher_name,publish_date=@publish_date,language=@language,edition=@edition,book_cost=@book_cost" +
+                        ",no_of_pages=@no_of_pages,book_description=@book_description,actual_stock=@actual_stock,current_stock=@current_stock" +
+                        ",book_img_link=@book_img_link WHERE book_id = @book_id;", con);
+                    cmd.Parameters.AddWithValue("@book_id", bookIDtxt.Text.Trim());
+                    cmd.Parameters.AddWithValue("@book_name", );
+                    cmd.Parameters.AddWithValue("@genre", );
+                    cmd.Parameters.AddWithValue("@author_name", );
+                    cmd.Parameters.AddWithValue("@publisher_name", );
+                    cmd.Parameters.AddWithValue("@publish_date", );
+                    cmd.Parameters.AddWithValue("@language", );
+                    cmd.Parameters.AddWithValue("@edition", );
+                    cmd.Parameters.AddWithValue("@book_cost", );
+                    cmd.Parameters.AddWithValue("@no_of_pages", );
+                    cmd.Parameters.AddWithValue("@book_description", );
+                    cmd.Parameters.AddWithValue("@actual_stock", );
+                    cmd.Parameters.AddWithValue("@current_stock", );
+                    cmd.Parameters.AddWithValue("@book_img_link", );
+                    
+
+
+
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    Response.Write("<script>alert('Author name updated succesfully.')</script>");
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("<script>alert('" + ex.Message + "')</script>");
+                }
             }
         }
 
