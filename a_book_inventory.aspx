@@ -1,32 +1,33 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage.Master" AutoEventWireup="true" CodeBehind="a_book_inventory.aspx.cs" Inherits="WebApplicationLibrary.a_book_inventory" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript">
-       $(document).ready(function () {
-           $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
-       });
+        $(document).ready(function () {
+            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+        });
 
-       function readURL(input) {
-           if (input.files && input.files[0]) {
-               var reader = new FileReader();
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
 
-               reader.onload = function (e) {
-                   $('#imgview').attr('src', e.target.result);
-               };
+                reader.onload = function (e) {
+                    $('#imgview').attr('src', e.target.result);
+                };
 
-               reader.readAsDataURL(input.files[0]);
-           }
-       }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
 
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="background-color:cadetblue">
+    <div style="background-color: cadetblue">
         <div class="container-fluid pt-4">
             <div class="row">
                 <!-- left column -->
                 <div class="col-md-5">
                     <div class="card">
-                        <div class="card-body">                       
+                        <div class="card-body">
                             <div class="row mb-2">
                                 <div class="col">
                                     <center>
@@ -90,7 +91,7 @@
                                             <label for="TextBox4" class="form-label">Publisher Name</label>
                                             <div class="form-group">
                                                 <div class="input-group">
-                                                   <asp:DropDownList class="form-control" ID="DropDownPublishers" runat="server">
+                                                    <asp:DropDownList class="form-control" ID="DropDownPublishers" runat="server">
                                                         <asp:ListItem Text="Publisher 1" Value="Publisher 1" />
                                                         <asp:ListItem Text="Publisher 2" Value="Publisher 2" />
                                                     </asp:DropDownList>
@@ -98,8 +99,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>                     
-                        
+                                </div>
+
                                 <div class="col-md-4">
                                     <div class="row">
                                         <div class="col mt-3">
@@ -121,7 +122,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            
+
                                 <div class="col-md-4">
                                     <div class="col mt-3">
                                         <label for="TextBox7" class="form-label">Genre</label>
@@ -211,7 +212,7 @@
                                 </div>
                             </div>
 
-                             <div class="row">
+                            <div class="row">
                                 <div class="col">
                                     <label for="description" class="form-label">Description</label>
                                     <div class="form-group">
@@ -220,7 +221,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>  
+                            </div>
 
                             <div class="row mt-3">
                                 <div class="col-4">
@@ -265,15 +266,15 @@
                             <div class="row">
                                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [book_master_tbl]"></asp:SqlDataSource>
                                 <div class="col">
-                                    <asp:GridView class="table" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="book_id" DataSourceID="SqlDataSource1">
+                                    <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="book_id" DataSourceID="SqlDataSource1">
                                         <Columns>
-                                            <asp:BoundField DataField="book_id" HeaderText="ID" ReadOnly="True" SortExpression="book_id" >
+                                            <asp:BoundField DataField="book_id" HeaderText="ID" ReadOnly="True" SortExpression="book_id">
 
-                                           
-                                            <ItemStyle Font-Bold="True" />
+
+                                                <ItemStyle Font-Bold="True" />
                                             </asp:BoundField>
 
-                                           
+
                                             <asp:TemplateField>
                                                 <ItemTemplate>
                                                     <div class="container-fluid">
@@ -308,22 +309,20 @@
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-12">
-                                                                        
                                                                         Cost -
                                                                         <asp:Label ID="Label9" runat="server" Font-Bold="True" Text='<%# Eval("book_cost") %>'></asp:Label>
                                                                         &nbsp;| Actual Stock -
                                                                         <asp:Label ID="Label10" runat="server" Font-Bold="True" Text='<%# Eval("actual_stock") %>'></asp:Label>
                                                                         &nbsp;| Available -
                                                                         <asp:Label ID="Label11" runat="server" Font-Bold="True" Text='<%# Eval("current_stock") %>'></asp:Label>
-                                                                        
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-12">
-                                                                        
                                                                         Description -
                                                                         <asp:Label ID="Label12" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Smaller" Text='<%# Eval("book_description") %>'></asp:Label>
-                                                                        
+
                                                                     </div>
                                                                 </div>
 
@@ -339,7 +338,7 @@
                                             </asp:TemplateField>
 
 
-                                            
+
                                         </Columns>
                                     </asp:GridView>
                                 </div>
@@ -353,7 +352,7 @@
         </div>
     </div>
 
-                                            <!-- BOOK INVENTORY GRIDVİEW CANCELED OBJECTS
+    <!-- BOOK INVENTORY GRIDVİEW CANCELED OBJECTS
                                             <asp:BoundField DataField="book_name" HeaderText="book_name" SortExpression="book_name" />
                                             <asp:BoundField DataField="genre" HeaderText="genre" SortExpression="genre" />
                                             <asp:BoundField DataField="author_name" HeaderText="author_name" SortExpression="author_name" />
