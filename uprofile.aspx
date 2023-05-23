@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="container">
+    <div class="container min-vh-100">
         <div class="row">
             <!-- left column -->
             <div class="col-md-6">

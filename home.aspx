@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
         <!-- Showcase -->
-    <div id="homepg_bg" >
+    <div id="homepg_bg" class="min-vh-100" >
     <section class=" text-light p-lg-0 pt-lg-1 text-center text-sm-start" id="showcaseSec">
         <div class="container justify-content-center">
             <div class="row d-sm-flex align-items-center justify-content-center">

@@ -1,9 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage.Master" AutoEventWireup="true" CodeBehind="a_book_iss.aspx.cs" Inherits="WebApplicationLibrary.a_book_i" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="background-color: cadetblue">
+    <div style="background-color: cadetblue" class="min-vh-100">
         <div class="container-fluid pt-4">
             <div class="row">
                 <!-- left column -->

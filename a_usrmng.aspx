@@ -7,7 +7,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="background-color:cadetblue">
+    <div style="background-color:cadetblue" class="min-vh-100">
     <div class="container-fluid pt-4">
         <div class="row">
             <!-- left column -->

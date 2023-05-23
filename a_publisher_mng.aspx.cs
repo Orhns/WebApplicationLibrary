@@ -169,8 +169,8 @@ namespace WebApplicationLibrary
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * FROM publisher_master_tbl WHERE publisher_id = @pbID;", con);
-                cmd.Parameters.AddWithValue("@pbID", publisherid.Text.Trim());
+                SqlCommand cmd = new SqlCommand("SELECT * FROM publisher_master_tbl WHERE publisher_id = @publisher_id;", con);
+                cmd.Parameters.AddWithValue("@publisher_id", publisherid.Text.Trim());
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {

@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
-    <div style="background-image: url('img/background2.jpg');">
+    <div style="background-image: url('img/background2.jpg'); background-size:cover"; class="min-vh-100">
     <div class="container" style="min-height:max-content">
         <div class="row">
             <div class="col-md-8 mt-4 mx-auto">

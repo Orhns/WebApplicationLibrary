@@ -12,8 +12,8 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="background-color:cadetblue">
-    <div class="container pt-4">
+    <div style="background-color:cadetblue" class="min-vh-100">
+    <div class="container pt-5">
         <div class="row ">
             <!-- left column -->
             <div class="col-md-5">
@@ -104,8 +104,6 @@
                         </div>
                     </div>
                 </div>
-                <br />
-                <br />
             </div>
         </div>
     </div>

@@ -7,7 +7,8 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
+    <div style="background-image: url('img/background2.jpg'); background-size:cover";">   
+    <div class="container min-vh-100">
         <div class="row">
     <div class="card">
                         <div class="card-body">
@@ -106,5 +107,6 @@
                         </div>
                     </div>
         </div>
+    </div>
     </div>
 </asp:Content>

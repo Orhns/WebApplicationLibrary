@@ -74,8 +74,8 @@ namespace WebApplicationLibrary
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * FROM author_master_tbl WHERE author_id = @auID;",con);
-                cmd.Parameters.AddWithValue("@auID",authorid.Text.Trim());
+                SqlCommand cmd = new SqlCommand("SELECT * FROM author_master_tbl WHERE author_id = @author_id;", con);
+                cmd.Parameters.AddWithValue("@author_id", authorid.Text.Trim());
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -103,9 +103,9 @@ namespace WebApplicationLibrary
                 {
                     con.Open(); 
                 }
-                SqlCommand cmd = new SqlCommand("INSERT INTO author_master_tbl (author_id,author_name) VALUES (@auID,@auName)", con);
-                cmd.Parameters.AddWithValue("@auID", authorid.Text.Trim());
-                cmd.Parameters.AddWithValue("@auName", authorName.Text.Trim());
+                SqlCommand cmd = new SqlCommand("INSERT INTO author_master_tbl (author_id,author_name) VALUES (@author_id,@author_name)", con);
+                cmd.Parameters.AddWithValue("@author_id", authorid.Text.Trim());
+                cmd.Parameters.AddWithValue("@author_name", authorName.Text.Trim());
                 cmd.ExecuteNonQuery();
                 con.Close() ;
                 Response.Write("<script>alert('Author added succesfully.')</script>");
@@ -125,9 +125,9 @@ namespace WebApplicationLibrary
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("UPDATE author_master_tbl SET author_name = @auName WHERE author_id = @auID;", con);
-                cmd.Parameters.AddWithValue("@auID", authorid.Text.Trim());
-                cmd.Parameters.AddWithValue("@auName", authorName.Text.Trim());
+                SqlCommand cmd = new SqlCommand("UPDATE author_master_tbl SET author_name = @author_name WHERE author_id = @author_id;", con);
+                cmd.Parameters.AddWithValue("@author_id", authorid.Text.Trim());
+                cmd.Parameters.AddWithValue("@author_name", authorName.Text.Trim());
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Response.Write("<script>alert('Author name updated succesfully.')</script>");
@@ -147,8 +147,8 @@ namespace WebApplicationLibrary
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("DELETE FROM author_master_tbl WHERE author_id = @auID;", con);
-                cmd.Parameters.AddWithValue("@auID", authorid.Text.Trim());
+                SqlCommand cmd = new SqlCommand("DELETE FROM author_master_tbl WHERE author_id = @author_id;", con);
+                cmd.Parameters.AddWithValue("@author_id", authorid.Text.Trim());
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Response.Write("<script>alert('Author deleted succesfully.')</script>");
@@ -168,15 +168,14 @@ namespace WebApplicationLibrary
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * FROM author_master_tbl WHERE author_id = @auID;", con);
-                cmd.Parameters.AddWithValue("@auID", authorid.Text.Trim());
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
+                SqlCommand cmd = new SqlCommand("SELECT * FROM author_master_tbl WHERE author_id=@author_id;", con);
+                cmd.Parameters.AddWithValue("@author_id", authorid.Text.Trim());
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable datatable = new DataTable();
+                adapter.Fill(datatable);
+                if (datatable.Rows.Count > 0)
                 {
-                    while (reader.Read())
-                    {
-                        authorName.Text = reader.GetString(1);
-                    }
+                    authorName.Text = datatable.Rows[0]["author_name"].ToString();
                 }
                 else
                 {

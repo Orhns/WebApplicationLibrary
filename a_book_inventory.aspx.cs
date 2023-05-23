@@ -102,8 +102,8 @@ namespace WebApplicationLibrary
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("SELECT * FROM book_master_tbl WHERE book_id =@bID;", con);
-                cmd.Parameters.AddWithValue("@bID",bookIDtxt.Text.Trim());
+                SqlCommand cmd = new SqlCommand("SELECT * FROM book_master_tbl WHERE book_id =@book_id;", con);
+                cmd.Parameters.AddWithValue("@book_id", bookIDtxt.Text.Trim());
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
