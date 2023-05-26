@@ -26,19 +26,36 @@ namespace WebApplicationLibrary
 
         protected void issueBtn_Click(object sender, EventArgs e)
         {
-            if (checkUser() && checkBook())
+            if (checkifuserhave() )
             {
-                issueBook();
+                Response.Write("<script>alert('Member already have this book.Can't get more than one.')</script>");
             }
             else
             {
-                Response.Write("<script>alert('Invalid user or member ID's')</script>");
+                if (CheckUser() && checkBook())
+                {
+                    issueBook();
+                }
+                else
+                {
+                    Response.Write("<script>alert('Invalid user or member ID's')</script>");
+                }
             }
         }
 
         protected void returnBtn_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (checkifuserhave())
+                {
+                    returnBook();
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "')</script>");
+            }
         }
 
         bool bookcheck;
@@ -71,7 +88,7 @@ namespace WebApplicationLibrary
             return bookcheck;
         }
         bool usrcheck;
-        bool checkUser()
+        bool CheckUser()
         {
             try
             {
@@ -116,7 +133,7 @@ namespace WebApplicationLibrary
                 adapter.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    booknameTxt.Text = dt.Rows[0]["book_name"].ToString();  
+                    booknameTxt.Text = dt.Rows[0]["book_name"].ToString();
                 }
                 else
                 {
@@ -143,7 +160,6 @@ namespace WebApplicationLibrary
                 Response.Write("<script>alert('" + ex.Message + "')</script>");
             }
         }
-
         void issueBook()
         {
             try
@@ -164,7 +180,7 @@ namespace WebApplicationLibrary
                 cmd.ExecuteNonQuery();
 
                 cmd = new SqlCommand("UPDATE book_master_tbl SET current_stock = current_stock-1 WHERE book_id=@book_id ;", con);
-                cmd.Parameters.AddWithValue("@book_id",bookidTxt.Text.Trim());
+                cmd.Parameters.AddWithValue("@book_id", bookidTxt.Text.Trim());
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Response.Write("<script>alert('Book issued succesfully.')</script>");
@@ -175,6 +191,80 @@ namespace WebApplicationLibrary
                 Response.Write("<script>alert('" + ex.Message + "')</script>");
             }
         }
-        
+        void returnBook()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(conn);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("DELETE FROM book_issue_tbl WHERE member_id = @member_id AND book_id = @book_id ;", con);
+                cmd.Parameters.AddWithValue("@member_id", memberidTxt.Text.Trim());
+                cmd.Parameters.AddWithValue("@book_id", bookidTxt.Text.Trim());
+                cmd.ExecuteNonQuery();
+
+                cmd = new SqlCommand("UPDATE book_master_tbl SET current_stock = current_stock+1 WHERE book_id=@book_id ;", con);
+                cmd.Parameters.AddWithValue("@book_id", bookidTxt.Text.Trim());
+                cmd.ExecuteNonQuery();
+                con.Close();
+                Response.Write("<script>alert('Returned')</script>");
+                GridView1.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "')</script>");
+            }
+        }
+        bool checkonhand;
+        bool checkifuserhave()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(conn);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("SELECT * FROM book_issue_tbl WHERE member_id = @member_id AND book_id = @book_id;", con);
+                cmd.Parameters.AddWithValue("@member_id", memberidTxt.Text.Trim());
+                cmd.Parameters.AddWithValue("@book_id", bookidTxt.Text.Trim());
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    checkonhand = true;
+                }
+                else
+                {
+                    checkonhand = false;
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "')</script>");
+            }
+            return checkonhand;
+        }
+
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            try
+            {
+                if (e.Row.RowType == DataControlRowType.DataRow)
+                {
+                    DateTime dt = Convert.ToDateTime(e.Row.Cells[5].Text);
+                    DateTime today = DateTime.Today;
+                    if (today > dt) {
+                        e.Row.BackColor = System.Drawing.Color.PaleVioletRed;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "')</script>");
+            }
+        }
     }
 }

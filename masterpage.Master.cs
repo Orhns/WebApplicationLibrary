@@ -123,5 +123,10 @@ namespace WebApplicationLibrary
             Session["status"] = "";
             Response.Redirect("home.aspx");
         }
+
+        protected void LinkButton7_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("uprofile.aspx");
+        }
     }
 }

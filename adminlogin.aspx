@@ -34,9 +34,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="home.aspx"> <i class="fa-solid fa-house"></i> Back to home </a>
-                <br />
-                <br />
+                
             </div>
         </div>
     </div>
