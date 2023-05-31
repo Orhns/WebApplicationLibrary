@@ -16,15 +16,10 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col">
-                                <center>
-                                    <img src="img/generaluser.png" width="100px" />
-                                </center>
+                            <div class="col-md-2">
+                                    <img src="img/edit profile.png" width="100px" />
                             </div>
-                        </div>
-
-                        <div class="row mb-2">
-                            <div class="col">
+                            <div class="col-md-10 m-auto">
                                 <center>
                                     <h4 class="mt-2 ">Profile</h4>
                                     <span>Account Status - </span>
@@ -33,6 +28,7 @@
                             </div>
                         </div>
                         <hr />
+
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="TextBox1" class="form-label">Full Name</label>
@@ -152,9 +148,11 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-md-2">
+                                    <img src="img/bookkk.png" width="100px" />
+                            </div>
+                            <div class="col-md-10 m-auto">
                                 <center>
-                                    <img src="img/books.png" width="100px" />
                                     <h4 class="mt-2 ">Your Books</h4>
                                     <div class="row mb-2">
                                         <center>
@@ -164,11 +162,8 @@
                                 </center>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <hr />
-                            </div>
-                        </div>
+                        <hr />
+                        
                         <div class="row">
                             <div class="col table-responsive">
                                 <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" OnRowDataBound="GridView1_RowDataBound"></asp:GridView>

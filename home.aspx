@@ -15,9 +15,8 @@
                 </div>
                 <div class="col-8">
                     <div class="m-lg-5">
-                    <h1>Welcome to <span class="text-warning"> online library system.</span></h1>
-                    <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rutrum magna leo. Donec vel pretium felis, vel placerat erat. Etiam a nisi in arcu lobortis vulputate ut nec lorem. Vestibulum eros justo, placerat sit amet sagittis et, varius ac erat. Nam et euismod lectus. Vestibulum egestas hendrerit nisi, eget porttitor erat scelerisque quis. Donec tellus urna, efficitur et metus vitae, fringilla elementum mauris. Curabitur neque velit, eleifend nec turpis eget, mattis condimentum sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
-                                    Proin luctus tortor eu diam commodo, ut tristique diam finibus. Maecenas nisi dolor, iaculis a lorem eget, pharetra laoreet mauris. Phasellus varius felis at consequat pulvinar. Aenean tortor elit.</p>
+                    <h1>Welcome to<span class="text-warning"> library management system! </span></h1>
+                    <p class="my-4">We're excited to have you join us on this platform designed to simplify your library operations. With our user-friendly interface and powerful features, you'll be able to effortlessly manage your library, streamline workflows, and provide a seamless experience for your patrons. Get ready to explore and make the most of our system's capabilities. We're here to support you every step of the way. Welcome, and happy library management!</p>
                     <div class="d-grid d-md-flex justify-content-md-end">
                         <button class="btn btn-primary btn-lg me-md-2" data-bs-toggle="modal" data-bs-target="#enroll">Search for the books.</button>
                     </div>
@@ -34,31 +33,31 @@
             <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                Accordion Item #1
+                How do I create an account with the online library?
                 </button>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                <div class="accordion-body">To create an account with the online library, visit their website or mobile app and look for the "Sign Up" or "Create Account" option. Follow the prompts to provide your personal information, such as name, email address, and sometimes a library card number. Once you submit the required details, your account will be created, and you can start accessing the library's resources.</div>
             </div>
             </div>
             <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                Accordion Item #2
+                How do I search for books or materials in the online library?
                 </button>
             </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                <div class="accordion-body">Searching for books or materials in the online library is typically easy. On the library's website or app, look for a search bar or a "Search" button. Enter keywords, book titles, authors, or any other relevant information related to the material you're looking for. Press enter or click the search button, and the system will display the search results with relevant books or materials matching your query.</div>
             </div>
             </div>
             <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                Accordion Item #3
+                Can I access an online library from different devices?
                 </button>
             </h2>
             <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                <div class="accordion-body">Yes, most online libraries offer cross-device accessibility. You can access the online library from various devices, including computers, smartphones, tablets, and e-readers, as long as you have an internet connection.</div>
             </div>
             </div>
         </div>

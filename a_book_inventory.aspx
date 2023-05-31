@@ -28,22 +28,23 @@
                 <div class="col-md-5">
                     <div class="card">
                         <div class="card-body">
-                            <div class="row mb-2">
-                                <div class="col">
-                                    <center>
-                                        <h4 class="mt-2 ">Book Details</h4>
-                                    </center>
-                                </div>
-                            </div>
-
                             <div class="row">
                                 <div class="col">
                                     <center>
-                                        <img id="imgview" src="img/books.png" width="100px" />
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <img src="img/book.png" width="100px" />
+                                            </div>
+                                            <div class="col-md-10 m-auto">
+                                                <center>
+                                                    <h3 class="mt-2 ">Book Details</h3>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <hr />
                                     </center>
                                 </div>
                             </div>
-                            <hr />
                             <div class="row">
                                 <div class="col">
                                     <asp:FileUpload onchange="readURL(this);" class="form-control" ID="FileUpload1" runat="server" />
@@ -249,18 +250,6 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col">
-                                    <center>
-                                        <h4 class="mt-2 ">Book Inventory list</h4>
-                                    </center>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <hr />
-                                </div>
-                            </div>
-                            <div class="row">
                                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [book_master_tbl]"></asp:SqlDataSource>
                                 <div class="col">
                                     <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="book_id" DataSourceID="SqlDataSource1">
@@ -341,12 +330,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <br />
-                    <br />
                 </div>
+                <br />
+                <br />
             </div>
         </div>
+    </div>
     </div>
 
     <!-- BOOK INVENTORY GRIDVİEW CANCELED OBJECTS

@@ -11,8 +11,14 @@
                         <div class="row">
                             <div class="col">
                                 <center>
-                                    <img src="img\adminuser.png" width="150px" />
-                                    <h3 class="mt-2 ">Admin Login</h3>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                        <img src="img/admin login.png" width="100px" />
+                                        </div>
+                                        <div class="col-md-8 m-auto">
+                                        <h3 class="mt-2 text-lg-start">Admin Login</h3>
+                                        </div>
+                                    </div>
                                     <hr />
                                 </center>
                             </div>

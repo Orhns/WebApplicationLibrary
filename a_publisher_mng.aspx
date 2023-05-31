@@ -14,23 +14,24 @@
             <!-- left column -->
             <div class="col-md-5">
                 <div class="card">
-                    <div class="card-body">                       
-                        <div class="row mb-2">
-                            <div class="col">
-                                <center>
-                                    <h4 class="mt-2 ">Publisher Details</h4>
-                                </center>
-                            </div>
-                        </div>
-
+                    <div class="card-body">
                         <div class="row">
-                            <div class="col">
+                            <div class="col" >
                                 <center>
-                                    <img src="img/publisher.png" width="100px" />
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                        <img src="img/id-card.png" width="100px" />
+                                        </div>
+                                        <div class="col-md-10 m-auto">
+                                        <center>
+                                            <h3 class="mt-2 ">Publisher Details</h3>
+                                        </center>
+                                        </div>
+                                    </div>
+                                    <hr />
                                 </center>
                             </div>
                         </div>
-                        <hr />
                         <div class="row">
                             <div class="col-md-4">
                                 <label for="TextBox1" class="form-label">Publisher ID</label>
@@ -77,15 +78,20 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col">
+                            <div class="col" >
                                 <center>
-                                    <h4 class="mt-2 ">Publisher list</h4>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                        <img src="img/check.png" width="100px" />
+                                        </div>
+                                        <div class="col-md-10 m-auto">
+                                        <center>
+                                            <h3 class="mt-2 ">Publisher list</h3>
+                                        </center>
+                                        </div>
+                                    </div>
+                                    <hr />
                                 </center>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <hr />
                             </div>
                         </div>
                         <div class="row">

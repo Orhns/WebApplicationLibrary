@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage.Master" AutoEventWireup="true" CodeBehind="a_book_iss.aspx.cs" Inherits="WebApplicationLibrary.a_book_i" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   <script type="text/javascript">
-            $(document).ready(function () {
-                $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
-            });
-   </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="background-color: cadetblue" class="min-vh-100">
@@ -15,22 +15,24 @@
                 <div class="col-md-5">
                     <div class="card">
                         <div class="card-body">
-                            <div class="row mb-2">
+                            <div class="row">
                                 <div class="col">
                                     <center>
-                                        <h4 class="mt-2 ">Book Issuing</h4>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <img src="img/bookkk.png" width="100px" />
+                                            </div>
+                                            <div class="col-md-10 m-auto">
+                                                <center>
+                                                    <h3 class="mt-2 ">Book Issuing</h3>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <hr />
                                     </center>
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col">
-                                    <center>
-                                        <img src="img/books.png" width="100px" />
-                                    </center>
-                                </div>
-                            </div>
-                            <hr />
                             <div class="row">
                                 <div class="col-md-6">
                                     <label for="TextBox2" class="form-label">Member ID</label>
@@ -43,7 +45,7 @@
                                     <div class="form-group">
                                         <div class="input-group">
                                             <asp:TextBox CssClass="form-control" ID="bookidTxt" runat="server" placeholder="Book ID"></asp:TextBox>
-                                            <asp:Button class="btn btn-primary" ID="getBtn" runat="server" Text="Get" OnClick="getBtn_Click"  />
+                                            <asp:Button class="btn btn-primary" ID="getBtn" runat="server" Text="Get" OnClick="getBtn_Click" />
                                         </div>
                                     </div>
                                 </div>
@@ -93,7 +95,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
                 <!-- Right column -->
                 <div class="col-md-7">
@@ -102,13 +104,18 @@
                             <div class="row">
                                 <div class="col">
                                     <center>
-                                        <h4 class="mt-2 ">Issued Book list</h4>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <img src="img/check.png" width="100px" />
+                                            </div>
+                                            <div class="col-md-10 m-auto">
+                                                <center>
+                                                    <h3 class="mt-2 ">Issued Book list</h3>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <hr />
                                     </center>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <hr />
                                 </div>
                             </div>
                             <div class="row">

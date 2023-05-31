@@ -15,22 +15,23 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <div class="row mb-2">
-                                <div class="col">
-                                    <center>
-                                        <h4 class="mt-2 ">Member Details</h4>
-                                    </center>
-                                </div>
-                            </div>
-
                             <div class="row">
                                 <div class="col">
                                     <center>
-                                        <img src="img/generaluser.png" width="100px" />
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <img src="img/edit profile.png" width="100px" />
+                                            </div>
+                                            <div class="col-md-10 m-auto">
+                                                <center>
+                                                    <h3 class="mt-2 ">Member Details</h3>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <hr />
                                     </center>
                                 </div>
                             </div>
-                            <hr />
                             <div class="row">
                                 <div class="col-md-3">
                                     <label for="TextBox1" class="form-label">Member ID</label>
@@ -128,7 +129,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <!-- Right column -->
                 <div class="col-md-6">
@@ -137,15 +138,21 @@
                             <div class="row">
                                 <div class="col">
                                     <center>
-                                        <h4 class="mt-2 ">Member List</h4>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <img src="img/add-contact.png" width="100px" />
+                                            </div>
+                                            <div class="col-md-10 m-auto">
+                                                <center>
+                                                    <h3 class="mt-2 ">Member List</h3>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <hr />
                                     </center>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <hr />
-                                </div>
-                            </div>
+                            
                             <div class="row">
                                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [member_master_tbl]"></asp:SqlDataSource>
                                 <div class="col">
