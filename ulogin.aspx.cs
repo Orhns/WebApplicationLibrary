@@ -12,7 +12,7 @@ namespace WebApplicationLibrary
 {
     public partial class userlogin : System.Web.UI.Page
     {
-        string conn = ConfigurationManager.ConnectionStrings["connectionstr"].ConnectionString;
+        string conn = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
 

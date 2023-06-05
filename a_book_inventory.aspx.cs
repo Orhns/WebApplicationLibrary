@@ -13,7 +13,7 @@ namespace WebApplicationLibrary
 {
     public partial class a_book_inventory : System.Web.UI.Page
     {
-        string conn = ConfigurationManager.ConnectionStrings["connectionstr"].ConnectionString;
+        string conn = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         static string global_filepath;
         static int global_actual_stock, global_current_stock, global_issued_books;
         protected void Page_Load(object sender, EventArgs e)

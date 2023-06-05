@@ -13,7 +13,7 @@ namespace WebApplicationLibrary
 {
     public partial class a_book_i : System.Web.UI.Page
     {
-        string conn = ConfigurationManager.ConnectionStrings["connectionstr"].ConnectionString;
+        string conn = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
 

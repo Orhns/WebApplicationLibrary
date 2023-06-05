@@ -129,10 +129,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="adminlogin.aspx" />
-    <Content Include="App_Data\libraryDB.mdf" />
-    <Content Include="App_Data\libraryDB_log.ldf">
-      <DependentUpon>libraryDB.mdf</DependentUpon>
-    </Content>
     <Content Include="a_author_mng.aspx" />
     <Content Include="a_book_iss.aspx" />
     <Content Include="a_book_inventory.aspx" />
